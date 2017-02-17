@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>DISCARDED</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/styleDiscarded.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+    
+<body>
+    
+    <div class="container">
+        <!--insert form tag-->
+        <form id="gform">
+            
+            <div id="padding" class="col-xs-2 col-sm-2 col-md-4"></div>
+        
+            <div class="col-xs-8 col-sm-8 col-md-8" id="formInputs">
+                
+                <div class="padding"></div>
+                <fieldset class="formLabel">
+                    <span class="label">unique ID</span>
+                    <input class="input" type="number" id="uniqueID" name="uniqueID"/>
+                </fieldset>
+                
+
+                <fieldset class="formLabel">
+                    <span class="label">edible</span>
+                    <input class="input" id="edibleNum" name="edibleNum" type="number" onchange="getEdibleQuantity();"/>
+                </fieldset>
+
+
+                <fieldset class="formLabel">
+                    <span class="label">inedible</span>
+                    <input class="input" id="inedibleNum" name="inedibleNum" type="number" onchange="getInedibleQuantity();"/>
+                </fieldset>
+                
+                 <fieldset class="formLabel">
+                    <span class="label">notes</span>
+                    <input class="input2" id="notes" name="notes" type="text"/>
+                </fieldset>
+                     
+                <p class="calculate" onclick="calculate();">calculate poundage</p><br>
+     
+            </div> <!--end form inputs-->
+ 
+
+            <div class="col-xs-12 col-sm-12 center-text dailyIntro">
+                <p>today you discarded</p>
+            </div>
+ 
+            <div class="col-xs-12 col-sm-12">
+                <p class="center-text">
+                    <span id="weight"></span>
+                    <span class="lbs">lbs</span>
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
+                <p>If you discard this much everyday,<br>
+                    you'd throw away <span id="yearlyLBS"> </span><br>
+                    of edible food in a year.<br><br>
+                It takes a lot of water to grow all that wasted food.</p>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro0">
+                <p>Good job!<br>
+                    You didn't throw away any food today.<br>
+                    Yet the average American discards<br>
+                    273lbs of food in a year.<br><br>
+                It takes a lot of water to grow all that wasted food.</p>
+            </div>
+     
+            <div class="row">
+                <div id="feedbackContainer" class="col-xs-12 col-sm-12 col-md-12" >
+                    
+                    <div id="water" class="illustration">
+                        <span class="feedbackTextSmall">Equivalent to leaving<br>your shower on for</span>
+                        <span class="feedbackText" id="waterFeedbackText"></span>
+                    </div>
+
+                </div>
+                    
+<!--other feedback divs-->
+<!--
+                    <div id="money" class="illustration">
+                        <span class="feedbackText" id="moneyFeedbackText"></span>
+                    </div>
+
+                    <div id="" class="buffer">
+                    </div>
+                    
+                    <div id="miles" class="illustration">
+                        <span class="feedbackText" id="milesFeedbackText"></span>
+                    </div>
+
+                    <div id="" class="buffer">
+                    </div>
+                    
+                    <div id="meals" class="illustration">
+                        <span class="feedbackText" id="mealsFeedbackText"></span>
+                    </div>
+
+                    <div id="links" class="illustration">
+                        <span class=""></span>
+                    </div>
+-->  
+                
+            </div> <!--end row-->
+            
+        </form> <!-- end form-->
+     
+        <div  class="buffer">
+             <input id="submit" type="submit" value="submit" onclick="submitForm()"/>
+        </div> <!--end submit button-->
+        
+        <div  id="success">
+             <p>success!</p>
+        </div> 
+        
+        <div  id="error">
+             <p>error, contact Jessie</p>
+        </div> 
+
+        
+    </div><!--end container-->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/calculation.js"></script>
+
+<!--    <script src="js/formSubmit.js"></script>-->
+    <script>
+     
+        function submitForm() {
+            console.log("submit form");
+            $.post("https://script.google.com/macros/s/AKfycbwBEtLPrnHsfza2sQ3L3lycwcEy-lgU8Ynv97x6pvgcIC1KoOL3/exec",
+                { uniqueID: $("#uniqueID").val(),
+                edibleNum: $("#edibleNum").val(),
+                inedibleNum: $("#inedibleNum").val(),
+                 notes: $("#notes").val()
+                }, function(data, status) {
+//                    JSON.parse(data.data)
+                if (status == "success") {
+                    document.getElementById("success").style.display="block";
+                } else{
+                    return;
+                }
+            });
+        }
+        
+    </script>
+    
+</body>
+
+</html>

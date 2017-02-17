@@ -1,0 +1,297 @@
+/* CSS styles */
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.placeholderText{
+    font-size:3em;
+    font-weight:700;
+/*    margin-left:20%;*/
+    width:60%;
+    padding-top: 20%;
+}
+.placeholderTextSmall{
+    font-size:1em;
+    color:white;
+/*    margin-left:20%;*/
+    width:60%;
+}
+
+.container{
+    width:100vw;
+}
+
+.row{
+    padding: 0 !important;
+}
+.padding{
+    height: 8vh;
+}
+.dailyIntro p{
+    padding-top:2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 auto;
+    width:80vw;
+}
+.yearIntro p{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+    width:80vw;
+    margin: 0 auto;
+    font-size:1em;
+}
+#yearIntro0{
+    display:none;
+}
+#yearlyLBS{
+    font-weight: bold !important;
+}
+#feedbackContainer{
+    width:100vw;
+    margin:0 auto;
+    padding: 0 !important;
+}
+
+
+/* FORM STYLES */
+.formLabel{
+    padding-bottom:2em;
+}
+span.label{
+    font-family: 'Source Sans Pro';
+    float:left;
+    width:30%;
+    font-size:1em;
+    font-weight: 100;
+    margin-top:.4em;
+    text-align: left;
+    margin-right:1em;
+    margin-left:-1em;
+    color:black;
+}
+span.label2{
+    font-family: 'Source Sans Pro';
+    font-size:1em;
+    font-weight: 100;
+    text-align: left;
+    color:black;
+    float:left;
+}
+
+#formInputs{
+    padding-bottom:1em;
+}
+
+
+.input{
+    width:25%;
+    float:left;
+    border:none !important;
+    height:2em;
+    background-color:white;
+    font-family: 'Source Sans Pro';
+    margin-left:1em;
+    background-color:rgba(118,207,238,.1);
+    box-shadow: .2em .2em rgb(118,207,238);
+    border-radius: 0;
+    padding-left:.5em;
+}
+.input:focus{
+    box-shadow: .1em .1em rgba(118,207,238,1);
+    outline: none;
+}
+.input2{
+    width:9em;
+    margin-right:-3em;
+    border:none !important;
+    height:2em;
+    background-color:white;
+    font-family: 'Source Sans Pro';
+    margin-left:1em;
+    background-color:rgba(118,207,238,.1);
+    box-shadow: .2em .2em rgb(118,207,238);
+    border-radius: 0;
+    padding-left:.5em;
+    float:left;
+}
+.input2:focus{
+    box-shadow: .1em .1em rgba(118,207,238,1);
+    outline: none;
+}
+
+.calculate{
+    text-align: center;
+    font-size:.75em;
+    font-family: 'Source Sans Pro';
+    padding: 0.5em 0 0.5em 0;
+    width:80%;
+    margin:0 auto;
+    box-shadow: .3em .3em rgb(118,207,238);
+    background-color:rgba(118,207,238,.05);
+    margin-top:1em;
+}
+.calculate:active{
+    box-shadow: .2em .2em rgba(118,207,238,1);
+    outline: none;
+}
+
+#weight{
+    font-size:5em;
+    font-weight: bold;
+    text-align:center;
+    font-family: 'Source Sans Pro';
+}
+.lbs{
+    font-size:2em;
+    text-align:center;
+    font-family: 'Source Sans Pro';
+}
+
+.center-text{
+    text-align:center;
+    font-family: 'Source Sans Pro';
+}
+
+
+
+
+.illustration{
+    min-height: 300px;
+}
+
+
+.feedbackText{
+    font-weight:bold;
+    top:10em;
+    left:60%;
+    position:absolute;
+    color:black;
+    font-family: 'Source Sans Pro';
+    background-color:white;
+    padding: 8px 8px 8px 8px;
+/*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
+    font-size:1.25em;
+}
+.feedbackTextSmall{
+    top:5em;
+    left:20%;
+    position:absolute;
+    color:black;
+    font-family: 'Source Sans Pro';
+    background-color:white;
+    padding: 8px 8px 8px 8px;
+/*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
+    font-size:.75em;
+}
+
+
+
+/* WATER FEEDBACK */
+@keyframes waterAnim {
+    from {background-position: 100% 0;}
+    to{ background-position: 0% 0;}
+}
+#water{
+    background-image: url(../imgs/waterScene0.png);
+    background-repeat: repeat-x;
+    background-size: cover; 
+    background-position: 100% 0;
+    animation: waterAnim 8s linear infinite;
+    animation-delay: 3s;
+}
+
+
+
+
+
+
+/* MONEY FEEDBACK */
+@keyframes moneyAnim {
+    from {background-position: 0 0;}
+    to{ background-position: 100% 0;}
+} 
+
+#money{
+    background-image: url(../imgs/moneyScene.svg);
+    background-repeat: repeat-x;
+    background-size: cover; 
+    background-position: 0 0;
+    animation: moneyAnim 12s linear infinite;
+    animation-delay: 0s;
+}
+
+/* MILES FEEDBACK */
+@keyframes milesAnim {
+    from {background-position: 100% 0;}
+    to{ background-position: 4% 0;}
+} 
+#miles{
+    background-image: url(../imgs/milesScene_landfill.svg);
+    background-repeat: repeat-x;
+    background-size: cover; 
+    background-position: 100% 0;
+    animation: milesAnim 16s linear infinite;
+    animation-delay: 0s;
+}
+
+#meals{
+    background-color: lightcoral;
+}
+
+
+
+
+
+
+
+
+.buffer{
+    min-height: 7em;
+}
+
+#notesInput{
+    width:60%;
+    margin: 0 auto;
+    padding-top:3em;
+    
+}
+
+#submit{
+    width:24%;
+    float:left;
+    border:none !important;
+    height:2.5em;
+    background-color:white;
+    font-family: 'Source Sans Pro';
+    margin: 2em 38% 1em 38%;
+    box-shadow: .3em .3em rgb(118,207,238);
+    background-color:rgba(118,207,238,.1);
+    text-align: center;
+    border-radius: 0;
+    
+}
+#submit:focus{
+    box-shadow: 0 0 rgb(118,207,238);
+    outline: none;
+    border-radius: 0;
+}
+.strong{
+    font-weight: bold;
+}
+
+#success p{
+    font-family: 'Source Sans Pro';
+    color: rgb(247,148,29);
+    text-align:center;
+    font-size: 1em;
+    display:none;
+}
+#error p{
+    font-family: 'Source Sans Pro';
+    color: rgb(247,148,29);
+    text-align:center;
+    font-size: 1em;
+    display:none;
+}
