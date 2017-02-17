@@ -1,8 +1,6 @@
 /* CSS styles */
 
-body{
-    font-family: 'Source Sans Pro', sans-serif;
-}
+
 
 .placeholderText{
     font-size:3em;
@@ -30,12 +28,12 @@ body{
 }
 .dailyIntro p{
     padding-top:2em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "brandon-grotesque";
     margin: 0 auto;
     width:80vw;
 }
 .yearIntro p{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "brandon-grotesque";
     padding-top:5vh;
     padding-bottom: 5vh;
     width:80vw;
@@ -60,7 +58,7 @@ body{
     padding-bottom:2em;
 }
 span.label{
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     float:left;
     width:30%;
     font-size:1em;
@@ -72,7 +70,7 @@ span.label{
     color:black;
 }
 span.label2{
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     font-size:1em;
     font-weight: 100;
     text-align: left;
@@ -91,7 +89,7 @@ span.label2{
     border:none !important;
     height:2em;
     background-color:white;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     margin-left:1em;
     background-color:rgba(118,207,238,.1);
     box-shadow: .2em .2em rgb(118,207,238);
@@ -108,7 +106,7 @@ span.label2{
     border:none !important;
     height:2em;
     background-color:white;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     margin-left:1em;
     background-color:rgba(118,207,238,.1);
     box-shadow: .2em .2em rgb(118,207,238);
@@ -124,7 +122,7 @@ span.label2{
 .calculate{
     text-align: center;
     font-size:.75em;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     padding: 0.5em 0 0.5em 0;
     width:80%;
     margin:0 auto;
@@ -141,17 +139,17 @@ span.label2{
     font-size:5em;
     font-weight: bold;
     text-align:center;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
 }
 .lbs{
     font-size:2em;
     text-align:center;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
 }
 
 .center-text{
     text-align:center;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
 }
 
 
@@ -168,7 +166,7 @@ span.label2{
     left:60%;
     position:absolute;
     color:black;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     background-color:white;
     padding: 8px 8px 8px 8px;
 /*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
@@ -179,7 +177,7 @@ span.label2{
     left:20%;
     position:absolute;
     color:black;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     background-color:white;
     padding: 8px 8px 8px 8px;
 /*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
@@ -264,7 +262,7 @@ span.label2{
     border:none !important;
     height:2.5em;
     background-color:white;
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     margin: 2em 38% 1em 38%;
     box-shadow: .3em .3em rgb(118,207,238);
     background-color:rgba(118,207,238,.1);
@@ -284,16 +282,9 @@ span.label2{
     display:none;
 }
 #success p{
-    font-family: 'Source Sans Pro';
+    font-family: "brandon-grotesque";
     color: rgb(118,207,238);
     text-align:center;
     font-size: 1em;
     margin-top:-3em;
-}
-#error p{
-    font-family: 'Source Sans Pro';
-    color: rgb(247,148,29);
-    text-align:center;
-    font-size: 1em;
-    display:none;
 }
