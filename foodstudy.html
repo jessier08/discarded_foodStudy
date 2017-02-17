@@ -125,9 +125,11 @@
              <p>success!</p>
         </div> 
         
+<!--
         <div  id="error">
              <p>error, contact Jessie</p>
         </div> 
+-->
 
         
     </div><!--end container-->
@@ -151,13 +153,20 @@
                 }, function(data, status) {
 //                    JSON.parse(data.data)
                 if (status == "success") {
-                    document.getElementById("success").style.display="block";
                 } else{
                     return;
                 }
             });
         }
         
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#submit').on('click',function(){
+                $("#success").toggle();
+            })
+        })
     </script>
     
 </body>

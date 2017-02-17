@@ -280,13 +280,15 @@ span.label2{
 .strong{
     font-weight: bold;
 }
-
+#success{
+    display:none;
+}
 #success p{
     font-family: 'Source Sans Pro';
-    color: rgb(247,148,29);
+    color: rgb(118,207,238);
     text-align:center;
     font-size: 1em;
-    display:none;
+    margin-top:-3em;
 }
 #error p{
     font-family: 'Source Sans Pro';

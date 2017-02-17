@@ -62,16 +62,11 @@ function calculate(){
     document.getElementById("waterFeedbackText")
         .innerHTML=(waterFeedbackShowerDays+' days');
     //console.log(weightCombined);
-    
 
     
     if (weightCombined === 0) {
         document.getElementById("water")
             .style.backgroundImage="url(../imgs/waterScene0.png)";
-        document.getElementById("yearIntro").style.display="none";
-        document.getElementById("yearIntro0").style.display="block";
-        document.getElementById("waterFeedbackText")
-            .innerHTML=(waterFeedbackShowerDaysAverage+' days');
     } if (weightCombined > 0.01 && weightCombined < 0.32){
         document.getElementById("water")
             .style.backgroundImage="url(../imgs/waterSceneBELOW.png)";
