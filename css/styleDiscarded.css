@@ -204,6 +204,20 @@ span.label2{
     animation-delay: 3s;
 }
 
+/* MILES FEEDBACK */
+@keyframes milesAnim {
+    from {background-position: 100% 0;}
+    to{ background-position: 0 0;}
+}
+#miles{
+    background-image: url(../imgs/milesSceneBELOW.png);
+    background-repeat: repeat-x;
+    background-size: cover; 
+    background-position: 100% 0;
+    animation: milesAnim 8s linear infinite;
+    animation-delay: 3s;
+}
+
 
 
 
