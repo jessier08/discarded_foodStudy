@@ -244,7 +244,7 @@ span.label2{
     height:2.5em;
     background-color:white;
     font-family: "brandon-grotesque";
-    margin: 2em 38% 2.5em 38%;
+    margin: 2em 38% 3em 38%;
     box-shadow: .3em .3em rgb(118,207,238);
     background-color:rgba(118,207,238,.1);
     text-align: center;
@@ -270,4 +270,5 @@ span.label2{
     color: rgb(118,207,238);
     text-align:center;
     font-size: 1em;
+    margin-top:-1em;
 }

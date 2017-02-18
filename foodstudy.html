@@ -4,7 +4,7 @@
 <head>
     
     <script src="https://use.typekit.net/neh8edf.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -21,11 +21,14 @@
 <body>
     
     <div class="container">
-        <!--insert form tag-->
         <form id="gform">
             
             <div id="padding" class="col-xs-2 col-sm-2 col-md-4"></div>
-        
+           
+            <div  id="success">
+                <p>success!</p>
+            </div> 
+            
             <div class="col-xs-8 col-sm-8 col-md-8" id="formInputs">
                 
                 <div class="padding"></div>
@@ -80,7 +83,6 @@
             </div>
 -->
 <!--money-->
-<!--
             <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
                 <p>If you discard this much everyday,
                     you'd throw away <span id="yearlyLBS"> </span><br>
@@ -96,8 +98,8 @@
                 <p class="strong">It takes a lot of water to grow all that wasted food.</p>
                 
             </div>
--->
 <!--miles-->
+<!--
             <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
                 <p>If you discard this much everyday,
                     you'd throw<br> away <span id="yearlyLBS"> </span>
@@ -113,6 +115,7 @@
                 <p class="strong">It takes a lot of water to grow all that wasted food.</p>
                 
             </div>
+-->
             
             
      
@@ -129,18 +132,18 @@
 -->
                     
 <!--other feedback divs-->
-<!--
                     <div id="money" class="illustration">
-                        <span class="feedbackTextSmall">Equivalent to spending<br></span>
+                        <span class="feedbackTextSmall">Equivalent to wasting<br></span>
                         <span class="feedbackText" id="moneyFeedbackText"></span>
                     </div>
--->
 
                     
+<!--
                     <div id="miles" class="illustration">
                         <span class="feedbackTextSmall">With emissions<br> equivalent to driving<br></span>
                         <span class="feedbackText" id="milesFeedbackText"></span>
                     </div>
+-->
                     
 <!--
                     <div id="meals" class="illustration">
@@ -155,9 +158,7 @@
              <input id="submit" type="submit" value="submit" onclick="submitForm()"/>
         </div> <!--end submit button-->
         
-        <div  id="success">
-             <p>success!</p>
-        </div> 
+
         
 <!--
         <div  id="error">
