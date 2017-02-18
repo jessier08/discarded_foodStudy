@@ -39,53 +39,78 @@ function calculate(){
     document.getElementById("yearlyLBS").innerHTML=(weightCombinedYearInt+"lbs");
     
     
-    //calculate WATER feedback, change DOM
-    waterFeedbackLiter= Math.round(weightEdibleYear*1634);
-    waterAverage = Math.round(273*1634);
-    waterFeedbackShowerHoursAverage = ((waterAverage/19)/60);
-    waterFeedbackShowerDaysAverage = Math.round(waterFeedbackShowerHoursAverage/24);
-    //console.log(waterFeedbackLiter);
-    waterFeedbackShowerHours= ((waterFeedbackLiter/19)/60);
-    waterFeedbackShowerDays= Math.round(waterFeedbackShowerHours/24);
-    //console.log(waterFeedbackShowerHours + " yearly shower hours");
+//    //calculate WATER feedback, change DOM
+//    waterFeedbackLiter= Math.round(weightEdibleYear*1634);
+//    waterAverage = Math.round(273*1634);
+//    waterFeedbackShowerHoursAverage = ((waterAverage/19)/60);
+//    waterFeedbackShowerDaysAverage = Math.round(waterFeedbackShowerHoursAverage/24);
+//    //console.log(waterFeedbackLiter);
+//    waterFeedbackShowerHours= ((waterFeedbackLiter/19)/60);
+//    waterFeedbackShowerDays= Math.round(waterFeedbackShowerHours/24);
+//    //console.log(waterFeedbackShowerHours + " yearly shower hours");
+//    
+//    if (waterFeedbackShowerHours < 24){
+//        document.getElementById("waterFeedbackText")
+//            .innerHTML=(waterFeedbackShowerHours+' hours');
+//    } if (waterFeedbackShowerHours > 25){
+//        document.getElementById("waterFeedbackText")
+//            .innerHTML=(waterFeedbackShowerDays+' days');
+//    } else {
+//        return;
+//    }
+//    
+//    document.getElementById("waterFeedbackText")
+//        .innerHTML=(waterFeedbackShowerDays+' days');
+//    //console.log(weightCombined);
+//
+//    
+//    if (weightCombined === 0) {
+//        document.getElementById("water")
+//            .style.backgroundImage="url(../imgs/waterScene0.png)";
+//    } if (weightCombined > 0.01 && weightCombined < 0.32){
+//        document.getElementById("water")
+//            .style.backgroundImage="url(../imgs/waterSceneBELOW.png)";
+//    } if (weightCombined > 0.33 && weightCombined < 0.45){
+//        document.getElementById("water")
+//            .style.backgroundImage="url(../imgs/waterSceneAVG.png)";
+//    } if (weightCombined > 0.46 && weightCombined < 0.74){
+//        document.getElementById("water")
+//            .style.backgroundImage="url(../imgs/waterSceneABOVE.png)";
+//    } if (weightCombined > 0.75){
+//        document.getElementById("water")
+//            .style.backgroundImage="url(../imgs/waterSceneABOVE2.png)";
+//    } else {
+//        return;
+//    };
     
-    if (waterFeedbackShowerHours < 24){
-        document.getElementById("waterFeedbackText")
-            .innerHTML=(waterFeedbackShowerHours+' hours');
-    } if (waterFeedbackShowerHours > 25){
-        document.getElementById("waterFeedbackText")
-            .innerHTML=(waterFeedbackShowerDays+' days');
-    } else {
-        return;
-    }
     
-    document.getElementById("waterFeedbackText")
-        .innerHTML=(waterFeedbackShowerDays+' days');
-    //console.log(weightCombined);
-
+//    //calculate MONEY feedback, change DOM
+    moneyFeedback = Math.round(weightEdibleYear*1.43);
+    
+    document.getElementById("moneyFeedbackText")
+            .innerHTML=("$" + moneyFeedback);
     
     if (weightCombined === 0) {
-        document.getElementById("water")
-            .style.backgroundImage="url(../imgs/waterScene0.png)";
+        document.getElementById("money")
+            .style.backgroundImage="url(../imgs/moneyScene0.png)";
     } if (weightCombined > 0.01 && weightCombined < 0.32){
-        document.getElementById("water")
-            .style.backgroundImage="url(../imgs/waterSceneBELOW.png)";
+        document.getElementById("money")
+            .style.backgroundImage="url(../imgs/moneySceneBELOW.png)";
     } if (weightCombined > 0.33 && weightCombined < 0.45){
-        document.getElementById("water")
-            .style.backgroundImage="url(../imgs/waterSceneAVG.png)";
+        document.getElementById("money")
+            .style.backgroundImage="url(../imgs/moneySceneAVG.png)";
     } if (weightCombined > 0.46 && weightCombined < 0.74){
-        document.getElementById("water")
-            .style.backgroundImage="url(../imgs/waterSceneABOVE.png)";
+        document.getElementById("money")
+            .style.backgroundImage="url(../imgs/moneySceneABOVE.png)";
     } if (weightCombined > 0.75){
-        document.getElementById("water")
-            .style.backgroundImage="url(../imgs/waterSceneABOVE2.png)";
+        document.getElementById("money")
+            .style.backgroundImage="url(../imgs/moneySceneABOVE2.png)";
     } else {
         return;
     };
     
     
-//    //calculate MONEY feedback, change DOM
-//    moneyFeedback = Math.round(weightEdibleYear*1.43);
+    
 //    //console.log(milesFeedbackMiles+" miles of 
 //    //CO2 emission equivalent to landfill emission");
 //    document.getElementById("moneyFeedbackText")
