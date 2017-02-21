@@ -85,36 +85,36 @@ function calculate(){
     
     
 //    //calculate MONEY feedback, change DOM
-    moneyFeedback = (weightEdibleYear*1.43).toFixed(2);
-
-    if (moneyFeedback < 1) {
-        moneyFeedbackHtml = moneyFeedback;
-    } else{
-        moneyFeedbackHtml = Math.round(moneyFeedback);
-    };
-    
-    document.getElementById("moneyFeedbackText")
-            .innerHTML=("$" + moneyFeedbackHtml);
-    
-    if (weightCombined === 0) {
-        document.getElementById("money")
-            .style.backgroundImage="url(../imgs/moneyScene0.png)";
-    } if (weightCombined > 0.01 && weightCombined < 0.32){
-        document.getElementById("money")
-            .style.backgroundImage="url(../imgs/moneySceneBELOW.png)";
-    } if (weightCombined > 0.33 && weightCombined < 0.45){
-        document.getElementById("money")
-            .style.backgroundImage="url(../imgs/moneySceneAVG.png)";
-    } if (weightCombined > 0.46 && weightCombined < 0.74){
-        document.getElementById("money")
-            .style.backgroundImage="url(../imgs/moneySceneABOVE.png)";
-    } if (weightCombined > 0.75){
-        document.getElementById("money")
-            .style.backgroundImage="url(../imgs/moneySceneABOVE2.png)";
-    } else {
-        return;
-    };
-    
+//    moneyFeedback = (weightEdibleYear*1.43).toFixed(2);
+//
+//    if (moneyFeedback < 1) {
+//        moneyFeedbackHtml = moneyFeedback;
+//    } else{
+//        moneyFeedbackHtml = Math.round(moneyFeedback);
+//    };
+//    
+//    document.getElementById("moneyFeedbackText")
+//            .innerHTML=("$" + moneyFeedbackHtml);
+//    
+//    if (weightCombined === 0) {
+//        document.getElementById("money")
+//            .style.backgroundImage="url(../imgs/moneyScene0.png)";
+//    } if (weightCombined > 0.01 && weightCombined < 0.32){
+//        document.getElementById("money")
+//            .style.backgroundImage="url(../imgs/moneySceneBELOW.png)";
+//    } if (weightCombined > 0.33 && weightCombined < 0.45){
+//        document.getElementById("money")
+//            .style.backgroundImage="url(../imgs/moneySceneAVG.png)";
+//    } if (weightCombined > 0.46 && weightCombined < 0.74){
+//        document.getElementById("money")
+//            .style.backgroundImage="url(../imgs/moneySceneABOVE.png)";
+//    } if (weightCombined > 0.75){
+//        document.getElementById("money")
+//            .style.backgroundImage="url(../imgs/moneySceneABOVE2.png)";
+//    } else {
+//        return;
+//    };
+//    
     
     
 //    //console.log(milesFeedbackMiles+" miles of 
@@ -124,29 +124,29 @@ function calculate(){
 //    
 //    
 //    //calculate MILES feedback, change DOM
-//    milesFeedbackEmission = (weightCombinedYear*0.529).toFixed(2);
-//    //console.log(milesFeedbackEmission + "kg CO2")
-//    milesFeedbackMiles = Math.round((weightCombinedYear*1.28));
-//    //console.log(milesFeedbackMiles+" miles driving of 
-//    //CO2 emission equivalent to landfill emission");
-//    document.getElementById("milesFeedbackText")
-//            .innerHTML=(milesFeedbackMiles + " miles");
-//    
-//    if (weightCombined === 0 && weightCombined < 0.32){
-//        document.getElementById("miles")
-//            .style.backgroundImage="url(../imgs/milesSceneBELOW.png)";
-//    } if (weightCombined > 0.01 && weightCombined < 0.45){
-//        document.getElementById("miles")
-//            .style.backgroundImage="url(../imgs/milesSceneAVG.png)";
-//    } if (weightCombined > 0.46 && weightCombined < 0.74){
-//        document.getElementById("iles")
-//            .style.backgroundImage="url(../imgs/milesSceneABOVE.png)";
-//    } if (weightCombined > 0.75){
-//        document.getElementById("miles")
-//            .style.backgroundImage="url(../imgs/milesSceneABOVE2.png)";
-//    } else {
-//        return;
-//    };
+    milesFeedbackEmission = (weightCombinedYear*0.529).toFixed(2);
+    //console.log(milesFeedbackEmission + "kg CO2")
+    milesFeedbackMiles = Math.round((weightCombinedYear*1.28));
+    //console.log(milesFeedbackMiles+" miles driving of 
+    //CO2 emission equivalent to landfill emission");
+    document.getElementById("milesFeedbackText")
+            .innerHTML=(milesFeedbackMiles + " miles");
+    
+    if (weightCombined === 0 && weightCombined < 0.32){
+        document.getElementById("miles")
+            .style.backgroundImage="url(../imgs/milesSceneBELOW.png)";
+    } if (weightCombined > 0.01 && weightCombined < 0.45){
+        document.getElementById("miles")
+            .style.backgroundImage="url(../imgs/milesSceneAVG.png)";
+    } if (weightCombined > 0.46 && weightCombined < 0.74){
+        document.getElementById("iles")
+            .style.backgroundImage="url(../imgs/milesSceneABOVE.png)";
+    } if (weightCombined > 0.75){
+        document.getElementById("miles")
+            .style.backgroundImage="url(../imgs/milesSceneABOVE2.png)";
+    } else {
+        return;
+    };
 //    
 //    
 //    //calculate MEALS feedback, change DOM

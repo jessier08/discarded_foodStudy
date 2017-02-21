@@ -40,13 +40,13 @@
 
                 <fieldset class="formLabel">
                     <span class="label">edible</span>
-                    <input class="input" id="edibleNum" name="edibleNum" type="number" onchange="getEdibleQuantity();"/>
+                    <input class="input" id="edibleNum" name="edibleNum" step="any" type="number" onchange="getEdibleQuantity();"/>
                 </fieldset>
 
 
                 <fieldset class="formLabel">
                     <span class="label">inedible</span>
-                    <input class="input" id="inedibleNum" name="inedibleNum" type="number" onchange="getInedibleQuantity();"/>
+                    <input class="input" id="inedibleNum" name="inedibleNum" step="any" type="number" onchange="getInedibleQuantity();calculate();"/>
                 </fieldset>
                 
                  <fieldset class="formLabel">
@@ -54,7 +54,7 @@
                     <input class="input2" id="notes" name="notes" type="text"/>
                 </fieldset>
                      
-                <p class="calculate" onclick="calculate();">calculate poundage</p><br>
+<!--                <p class="calculate" onclick="calculate();">calculate poundage</p><br>-->
      
             </div> <!--end form inputs-->
  
@@ -83,6 +83,7 @@
             </div>
 -->
 <!--money-->
+<!--
             <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
                 <p>If you discard this much everyday,
                     you'd throw away <span id="yearlyLBS"> </span><br>
@@ -98,8 +99,8 @@
                 <p class="strong">It takes a lot of water to grow all that wasted food.</p>
                 
             </div>
+-->
 <!--miles-->
-<!--
             <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
                 <p>If you discard this much everyday,
                     you'd throw<br> away <span id="yearlyLBS"> </span>
@@ -115,7 +116,6 @@
                 <p class="strong">It takes a lot of water to grow all that wasted food.</p>
                 
             </div>
--->
             
             
      
@@ -132,24 +132,25 @@
 -->
                     
 <!--other feedback divs-->
+<!--
                     <div id="money" class="illustration">
                         <span class="feedbackTextSmall">Equivalent to wasting<br></span>
                         <span class="feedbackText" id="moneyFeedbackText"></span>
                     </div>
+-->
+
 
                     
-<!--
                     <div id="miles" class="illustration">
                         <span class="feedbackTextSmall">With emissions<br> equivalent to driving<br></span>
                         <span class="feedbackText" id="milesFeedbackText"></span>
                     </div>
--->
+
                     
 <!--
                     <div id="meals" class="illustration">
                         <span class="feedbackText" id="mealsFeedbackText"></span>
                     </div>
--->
             </div> <!--end row-->
             
         </form> <!-- end form-->
