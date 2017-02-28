@@ -21,57 +21,46 @@
 <body>
     
     <div class="container">
+        
         <form id="gform">
             
-            <div id="padding" class="col-xs-2 col-sm-2 col-md-4"></div>
+            <div class="row">  
+                <div id="padding" class="col-xs-2 col-sm-2 col-md-2 col-lg-4"></div>
+
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-4" id="formInputs">
+
+                    <div class="padding"></div>
+                    <fieldset class="formLabel">
+                        <span class="label">unique ID</span>
+                        <input class="input" type="number" id="uniqueID" name="uniqueID"/>
+                    </fieldset>
+
+
+                    <fieldset class="formLabel">
+                        <span class="label">edible</span>
+                        <input class="input" id="edibleNum" name="edibleNum" step="any" type="number" onchange="getEdibleQuantity();calculate();"/>
+                    </fieldset>
+
+
+                    <fieldset class="formLabel">
+                        <span class="label">inedible</span>
+                        <input class="input" id="inedibleNum" name="inedibleNum" step="any" type="number" onchange="getInedibleQuantity();calculate();"/>
+                    </fieldset>
+
+                     <fieldset class="formLabel">
+                        <span class="label">notes</span>
+                        <input class="input2" id="notes" name="notes" type="text"/>
+                    </fieldset>
+
+                </div> <!--end form inputs-->
+            </div> <!--end form row-->
            
-            <div  id="success">
-                <p>success!</p>
-            </div> 
-            
-            <div class="col-xs-8 col-sm-8 col-md-8" id="formInputs">
-                
-                <div class="padding"></div>
-                <fieldset class="formLabel">
-                    <span class="label">unique ID</span>
-                    <input class="input" type="number" id="uniqueID" name="uniqueID"/>
-                </fieldset>
-                
-
-                <fieldset class="formLabel">
-                    <span class="label">edible</span>
-                    <input class="input" id="edibleNum" name="edibleNum" step="any" type="number" onchange="getEdibleQuantity();"/>
-                </fieldset>
-
-
-                <fieldset class="formLabel">
-                    <span class="label">inedible</span>
-                    <input class="input" id="inedibleNum" name="inedibleNum" step="any" type="number" onchange="getInedibleQuantity();calculate();"/>
-                </fieldset>
-                
-                 <fieldset class="formLabel">
-                    <span class="label">notes</span>
-                    <input class="input2" id="notes" name="notes" type="text"/>
-                </fieldset>
-                     
-<!--                <p class="calculate" onclick="calculate();">calculate poundage</p><br>-->
-     
-            </div> <!--end form inputs-->
- 
-
-            <div class="col-xs-12 col-sm-12 center-text dailyIntro">
-                <p>today you discarded <span id="weight"></span>
-                    <span class="lbs">lbs</span> </p>
+            <div class="row"> <!--daily discard total-->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center-text dailyIntro">
+                    <p>today you discarded <span id="weight"></span>
+                        <span class="lbs">lbs</span> </p>
+                </div>
             </div>
-<!--
- 
-            <div class="col-xs-12 col-sm-12">
-                <p class="center-text">
-                    <span id="weight"></span>
-                    <span class="lbs">lbs</span>
-                </p>
-            </div>
--->
 
 <!--water-->
 <!--
@@ -101,13 +90,34 @@
             </div>
 -->
 <!--miles-->
-            <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro">
-                <p>If you discard this much everyday,
-                    you'd throw<br> away <span id="yearlyLBS"> </span>
-                    <br>of food in a year.<br><br>
-                <strong>All that food is sent to landfill, emitting greenhouse gases.</strong></p>
-            </div>
+<!--            <div class="col-md-4 col-lg-4"></div>-->
             
+<!--
+            <div class="row">
+                <div id="padding" class="col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 yearIntro" id="yearIntro">
+                    <p>If you discard this much everyday,
+                        you'd throw away<br> <span id="yearlyLBS"> </span>
+                        <br>of food in a year.<br><br>
+                    <strong>All that food is sent to landfill, emitting greenhouse gases.</strong></p>
+                </div>
+            </div>
+-->
+            
+<!--meals-->            
+            <div class="row">
+                <div id="padding" class="col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 yearIntro" id="yearIntro">
+                    <p>If you discard this much everyday,<br>
+                        you'd throw away<br> <span id="yearlyLBS"> </span>
+                        <br>of food in a year.<br><br>
+                    <strong>Wasting calories and potential fuel for you and your loved ones.  </strong></p>
+                </div>
+            </div>
+
+            
+<!--average-->            
+<!--
             <div class="col-xs-12 col-sm-12 yearIntro" id="yearIntro0">
                 <p>Good job!<br>
                     You didn't throw away any food today.<br>
@@ -116,11 +126,11 @@
                 <p class="strong">It takes a lot of water to grow all that wasted food.</p>
                 
             </div>
-            
-            
-     
+-->
+
             <div class="row">
-                <div id="feedbackContainer" class="col-xs-12 col-sm-12 col-md-12" >
+   
+                <div id="feedbackContainer" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
                     
 <!--
                     <div id="water" class="illustration">
@@ -131,43 +141,42 @@
                 </div>
 -->
                     
-<!--other feedback divs-->
 <!--
                     <div id="money" class="illustration">
                         <span class="feedbackTextSmall">Equivalent to wasting<br></span>
                         <span class="feedbackText" id="moneyFeedbackText"></span>
                     </div>
 -->
-
-
-                    
-                    <div id="miles" class="illustration">
-                        <span class="feedbackTextSmall">With emissions<br> equivalent to driving<br></span>
-                        <span class="feedbackText" id="milesFeedbackText"></span>
-                    </div>
-
                     
 <!--
+                    <div id="miles" class="illustration">
+                        <p><span class="feedbackTextSmall">With emissions<br> equivalent to driving<br></span></p>
+                        <span class="feedbackText" id="milesFeedbackText"></span>
+                    </div>
+-->
+                    
+
                     <div id="meals" class="illustration">
+                        <p><span class="feedbackTextSmall">Equivalent to</span></p>
                         <span class="feedbackText" id="mealsFeedbackText"></span>
                     </div>
             </div> <!--end row-->
             
-        </form> <!-- end form-->
+
+
+                </div><!--end feedback container-->
      
-        <div  class="buffer">
-             <input id="submit" type="submit" value="submit" onclick="submitForm()"/>
-        </div> <!--end submit button-->
-        
-
-        
-<!--
-        <div  id="error">
-             <p>error, contact Jessie</p>
-        </div> 
--->
-
-        
+                <div  class="buffer">
+                    <input id="submit" type="submit" value="submit" onclick="submitForm()"/>
+                </div> <!--end submit button-->
+                
+                <div  id="success">
+                    <p>success!</p>
+                </div>
+                
+            
+            </div><!-- end feedback row-->
+        </form> <!-- end form-->  
     </div><!--end container-->
 
 
@@ -184,14 +193,18 @@
                 edibleNum: $("#edibleNum").val(),
                 inedibleNum: $("#inedibleNum").val(),
                  notes: $("#notes").val()
-                })
-            };   
-    </script>
-    
-    <script>
+                }, function(data, status) {
+//                    JSON.parse(data.data)
+                if (status == "success") {
+                } else{
+                    return;
+                }
+            });
+        }
+
         $(document).ready(function(){
             $('#submit').on('click',function(){
-                $("#success").css("display","block");
+                        $("#success").toggle();    
             })
         })
     </script>

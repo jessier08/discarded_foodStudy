@@ -25,7 +25,7 @@ span.label{
     font-size:1em;
     font-weight: 100;
     margin-top:.4em;
-    text-align: left;
+    text-align: right;
     margin-right:1em;
     margin-left:-1em;
     color:black;
@@ -135,20 +135,33 @@ span.label2{
 }
 #yearlyLBS{
     font-weight: bold !important;
+    font-size:2em;
 }
 
 
 
 #feedbackContainer{
-    width:100vw;
-    margin:0 auto;
     padding: 0 !important;
 }
 .illustration{
+    width:450px;
     min-height: 300px;
+    margin:0 auto;
+    float:none;
 }
 
 
+
+.feedbackTextSmall{
+    top:5em;
+    left:25vw;
+    position: absolute;
+    color:black;
+    font-family: "brandon-grotesque";
+    background-color:white;
+    padding: 8px 8px 8px 8px;
+    font-size:1em;
+}
 .feedbackText{
     font-weight:bold;
     top:10em;
@@ -158,19 +171,7 @@ span.label2{
     font-family: "brandon-grotesque";
     background-color:white;
     padding: 8px 8px 8px 8px;
-/*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
     font-size:1.25em;
-}
-.feedbackTextSmall{
-    top:5em;
-    left:20%;
-    position:absolute;
-    color:black;
-    font-family: "brandon-grotesque";
-    background-color:white;
-    padding: 8px 8px 8px 8px;
-/*    box-shadow: .2em .2em rgba(180,180,180,.8);*/
-    font-size:1em;
 }
 
 
@@ -218,11 +219,19 @@ span.label2{
     animation-delay: 3s;
 }
 
-
-
-
-
-
+/* MEALS FEEDBACK */
+@keyframes mealsAnim {
+    from {background-position: 100% 0;}
+    to{ background-position: 0 0;}
+}
+#meals{
+    background-image: url(../imgs/mealsScene0.png);
+    background-repeat: repeat-x;
+    background-size: cover; 
+    background-position: 100% 0;
+    animation: milesAnim 8s linear infinite;
+    animation-delay: 3s;
+}
 
 
 
@@ -271,4 +280,9 @@ span.label2{
     text-align:center;
     font-size: 1em;
     margin-top:-1em;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float:none;
 }
